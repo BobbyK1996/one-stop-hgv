@@ -2,6 +2,8 @@ import '@/app/_styles/globals.css';
 
 import { poppins } from '@lib/fonts';
 
+import { NavigationProvider } from '@/app/context/navigationContext';
+
 import Header from '@components/Header';
 
 export const metadata = {
@@ -13,9 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body
-        className={`${poppins} bg-primary-600 font-poppins relative -z-10 min-h-screen w-full overflow-x-hidden text-white`}
+        className={`${poppins} relative -z-10 min-h-screen w-full overflow-x-hidden bg-primary-600 font-poppins text-white`}
       >
-        <Header />
+        <NavigationProvider>
+          <Header />
+        </NavigationProvider>
         {children}
       </body>
     </html>

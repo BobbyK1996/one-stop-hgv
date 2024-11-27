@@ -6,6 +6,8 @@ import NavLink from '@components/NavLink';
 
 import { IoMdCloseCircle, IoMdMenu } from 'react-icons/io';
 
+import { useNavigation } from '@/app/context/navigationContext';
+
 const links = [
   {
     name: 'Courses',
@@ -19,6 +21,7 @@ const links = [
 
 function Navigation({ type }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { derivedNav, setCurrentNav } = useNavigation();
 
   useEffect(() => {
     if (menuOpen) {
@@ -46,7 +49,7 @@ function Navigation({ type }) {
                     key={index}
                     name={link.name}
                     address={link.address}
-                    isActive={false}
+                    isActive={derivedNav === link.address}
                   />
                 );
               })}
@@ -60,7 +63,7 @@ function Navigation({ type }) {
             </div>
 
             <div
-              className={`xs:h-[calc(100%-170px)] xs:top-[170px] fixed top-[138px] z-20 h-[calc(100%-138px)] w-full backdrop-blur-md duration-500 ease-in-out ${
+              className={`fixed top-[138px] z-20 h-[calc(100%-138px)] w-full backdrop-blur-md duration-500 ease-in-out xs:top-[170px] xs:h-[calc(100%-170px)] ${
                 menuOpen
                   ? 'backdrop-blur-gradient left-0 sm:hidden'
                   : 'left-[-100%] p-10'
@@ -70,8 +73,9 @@ function Navigation({ type }) {
                 <NavLink
                   name='Home'
                   address='/'
-                  isActive={false}
+                  isActive={derivedNav === '/'}
                   customCSS='py-2 text-2xl min-w-72 text-white'
+                  onClick={() => setCurrentNav('/')}
                 />
 
                 {links.map((link, index) => (
@@ -79,7 +83,7 @@ function Navigation({ type }) {
                     key={index}
                     name={link.name}
                     address={link.address}
-                    isActive={false}
+                    isActive={derivedNav === link.address}
                     customCSS='py-2 text-2xl min-w-72 text-white'
                   />
                 ))}
