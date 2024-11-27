@@ -4,7 +4,7 @@ import { logoPNG } from '@/public';
 
 function Logo() {
   return (
-    <Link href='/' className='z-10'>
+    <Link href='/' className='z-10 inline-block'>
       <Image
         // src='/logo.png'
         src={logoPNG}
