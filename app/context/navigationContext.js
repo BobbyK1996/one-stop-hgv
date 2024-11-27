@@ -1,13 +1,6 @@
 'use client';
 
-import {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  useRef,
-  useMemo,
-} from 'react';
+import { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 const NavigationContext = createContext();
@@ -32,7 +25,7 @@ function NavigationProvider({ children }) {
         window.removeEventListener('hashchange', handleNavigationChange);
       };
     }
-  }, [pathName]);
+  }, []);
 
   const derivedNav = currentNav.startsWith('#')
     ? currentNav

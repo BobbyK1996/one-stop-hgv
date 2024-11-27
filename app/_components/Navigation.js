@@ -50,6 +50,7 @@ function Navigation({ type }) {
                     name={link.name}
                     address={link.address}
                     isActive={derivedNav === link.address}
+                    onClick={() => setCurrentNav(link.address)}
                   />
                 );
               })}
@@ -85,6 +86,7 @@ function Navigation({ type }) {
                     address={link.address}
                     isActive={derivedNav === link.address}
                     customCSS='py-2 text-2xl min-w-72 text-white'
+                    onClick={() => setCurrentNav(link.address)}
                   />
                 ))}
               </ul>
