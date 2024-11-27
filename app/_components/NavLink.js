@@ -10,7 +10,6 @@ function NavLink({ name, address, isActive, onClick, customCSS }) {
       <Link
         href={targetUrl}
         className={`relative z-10 inline-block w-full p-5 text-center before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:scale-0 before:bg-primary-600 before:transition-transform before:duration-300 before:content-[""] hover:before:scale-x-100 hover:before:scale-y-[65%] ${isActive && 'before:scale-x-100 before:scale-y-[65%]'}`}
-        // onClick={() => onClick(address)}
         onClick={onClick}
       >
         {name}

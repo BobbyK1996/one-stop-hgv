@@ -10,22 +10,22 @@ function NavigationProvider({ children }) {
   const initialPath = useRef(pathName);
   const [currentNav, setCurrentNav] = useState(pathName);
 
-  useEffect(() => {
-    const handleNavigationChange = () => {
+  const handleNavigationChange = () => {
+    if (typeof window !== 'undefined') {
       const hash = window.location.hash;
       setCurrentNav(hash || initialPath.current);
-    };
-
-    if (typeof window !== 'undefined') {
-      handleNavigationChange();
-
-      window.addEventListener('hashchange', handleNavigationChange);
-
-      return () => {
-        window.removeEventListener('hashchange', handleNavigationChange);
-      };
     }
-  }, []);
+  };
+
+  useEffect(() => {
+    handleNavigationChange();
+
+    window.addEventListener('hashchange', handleNavigationChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleNavigationChange);
+    };
+  }, [pathName]);
 
   const derivedNav = currentNav.startsWith('#')
     ? currentNav
