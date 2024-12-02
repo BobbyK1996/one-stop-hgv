@@ -4,7 +4,8 @@ import LandingSubHeading from '@components/LandingSubHeading';
 import Button from '@components/Button';
 import ProductCards from '@components/ProductCards';
 
-import { COURSES_CARDS } from '@lib/data';
+import { COURSES_CARDS, WHY_CHOOSE_ACCORDION } from '@lib/data';
+import Accordion from './_components/Accordion';
 
 export default function Page() {
   return (
@@ -36,7 +37,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className='grid grid-cols-1 px-4 gap-x-8 gap-y-16 md:grid-cols-2 xl:grid-cols-4'>
+        <div className='grid grid-cols-1 gap-x-8 gap-y-16 px-4 md:grid-cols-2 xl:grid-cols-4'>
           {COURSES_CARDS.map((card) => (
             <ProductCards
               key={card.id}
@@ -48,6 +49,30 @@ export default function Page() {
             </ProductCards>
           ))}
         </div>
+      </section>
+
+      <section className='mx-auto my-32 grid w-full max-w-[1800px] grid-cols-1 gap-x-8 gap-y-10 px-4 md:grid-cols-2 md:gap-y-20'>
+        <span className='flex items-center text-center md:col-span-2 md:px-8 lg:px-12 xl:px-4 2xl:items-start 2xl:px-6'>
+          <h1 className='relative text-6xl text-white after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-24 after:-translate-x-2/4 after:bg-white sm:text-7xl lg:text-8xl'>
+            Why Choose One Stop HGV?
+          </h1>
+        </span>
+        <div className='space-y-10 xs:pl-4'>
+          <p className='text-lg font-bold text-black sm:text-xl lg:text-2xl'>
+            Obtaining your HGV licence opens the door to a dynamic and
+            high-demand career with impressive earning potential. With many
+            drivers in the UK earning over £50,000 annually, it’s no surprise
+            that the logistics industry offers a stable and rewarding future.
+            Whether you're just beginning to research or you're ready to start
+            training, we’re here to help every step of the way.
+          </p>
+          <p className='text-lg font-bold text-white sm:text-xl lg:text-2xl'>
+            At One Stop HGV, we make the process as smooth and stress-free as
+            possible, focusing on the administrative side while you concentrate
+            on your training
+          </p>
+        </div>
+        <Accordion accordionData={WHY_CHOOSE_ACCORDION} />
       </section>
     </>
   );

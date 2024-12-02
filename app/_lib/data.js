@@ -90,3 +90,26 @@ export const COURSES_CARDS = [
     ),
   },
 ];
+
+export const WHY_CHOOSE_ACCORDION = [
+  {
+    title: 'Efficient Process Management',
+    content:
+      'We handle all the paperwork, test bookings, and scheduling, so you can focus on learning.',
+  },
+  {
+    title: 'Experienced Training Partners',
+    content:
+      'We work with a network of trusted professionals to ensure you get top-quality instruction.',
+  },
+  {
+    title: 'Full Support Throughout',
+    content:
+      'From securing your medical exam to booking your practical test, we offer ongoing support for a seamless experience.',
+  },
+  {
+    title: 'Career Preparation',
+    content:
+      'We help you prepare for the next steps, whether it’s securing your first job or preparing for interviews.',
+  },
+];
