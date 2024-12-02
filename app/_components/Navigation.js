@@ -93,6 +93,38 @@ function Navigation({ type }) {
             </div>
           </>
         )}
+
+        {isFooter && (
+          <ul>
+            <NavLink
+              name='Home'
+              address='/'
+              isActive={derivedNav === '/'}
+              onClick={() => setCurrentNav('/')}
+              effects={false}
+            />
+            {links.map((link, index) => {
+              return (
+                <NavLink
+                  key={index}
+                  name={link.name}
+                  address={link.address}
+                  isActive={derivedNav === link.address}
+                  customCSS='pb-1'
+                  onClick={() => setCurrentNav(link.address)}
+                  effects={false}
+                />
+              );
+            })}
+            <NavLink
+              name='Terms & Conditions'
+              address='termsconditions'
+              isActive={derivedNav === '/termsconditions'}
+              onClick={() => setCurrentNav('/termsconditions')}
+              effects={false}
+            />
+          </ul>
+        )}
       </nav>
     </>
   );

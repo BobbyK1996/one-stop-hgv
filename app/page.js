@@ -16,7 +16,7 @@ export default function Page() {
         className='md:-text-xl z-10 h-screen max-h-[1000px] min-h-[667px] w-fit max-w-7xl gap-4 border-2 border-transparent lg:my-auto 2xl:max-h-[1400px]'
         id='home'
       >
-        <div className='mt-[138px] flex h-[calc(100%-138px)] flex-col gap-10 border-green-600 px-4 py-10 xs:mt-[170px] xs:h-[calc(100%-170px)] md:px-10 md:py-20 lg:px-20 lg:py-28 xl:px-28 xl:py-40'>
+        <div className='mt-[138px] flex flex-col gap-10 border-green-600 px-4 py-10 xs:mt-[170px] md:px-10 md:py-20 lg:px-20 lg:py-28 xl:px-28 xl:py-40'>
           <LandingHeading />
           <LandingSubHeading />
           <Button href='#contact'>Call now!</Button>
@@ -51,8 +51,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section className='mx-auto my-32 grid w-full max-w-[1800px] grid-cols-1 gap-x-8 gap-y-10 px-4 md:grid-cols-2 md:gap-y-20'>
-        <span className='flex items-center text-center md:col-span-2 md:px-8 lg:px-12 xl:px-4 2xl:items-start 2xl:px-6'>
+      <section
+        className='mx-auto my-32 grid w-full max-w-[1800px] grid-cols-1 gap-x-8 gap-y-10 px-4 md:grid-cols-2 md:gap-y-20'
+        id='whyus'
+      >
+        <span className='mt-[138px] flex items-center text-center xs:mt-[170px] md:col-span-2 md:px-8 lg:px-12 xl:px-4 2xl:items-start 2xl:px-6'>
           <h1 className='relative text-6xl text-white after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-24 after:-translate-x-2/4 after:bg-white sm:text-7xl lg:text-8xl'>
             Why Choose One Stop HGV?
           </h1>
