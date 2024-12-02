@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import AccordionItem from './AccordionItem';
 
-function ProductCards({ children, imageParams, title }) {
+function ProductCards({ children, imageParams, title, dropdownContent }) {
   return (
     <div className='mx-auto flex min-w-64 max-w-sm flex-col gap-6 rounded-md bg-gradient-to-t from-slate-100 from-40% to-white to-100% shadow-2xl'>
       <Image
@@ -14,10 +14,7 @@ function ProductCards({ children, imageParams, title }) {
         <p className='h-64 mt-4 mb-8 text-lg sm:h-44 xl:h-64 2xl:h-44'>
           {children}
         </p>
-        <AccordionItem
-          title='test'
-          content='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, obcaecati. Qui iste repudiandae quasi sed! Corrupti, quasi quisquam ut praesentium consequatur, dolores in dignissimos reiciendis sequi aut eveniet ab id inventore eligendi? export default ProductCards;'
-        />
+        <AccordionItem title='test' content={dropdownContent} />
       </div>
     </div>
   );

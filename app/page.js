@@ -5,6 +5,7 @@ import Button from '@components/Button';
 import ProductCards from './_components/ProductCards';
 
 import { c1Image, cImage, ceImage, cpcImage } from '@/public';
+import Bulletpoints from './_components/Bulletpoints';
 
 const COURSES_CARDS = [
   {
@@ -16,6 +17,18 @@ const COURSES_CARDS = [
     title: 'HGC C1',
     content:
       'Category C1 training covers vehicles heavier than standard vans, like ambulances, delivery trucks, and small HGVs, ideal for roles not needing larger Category C or C+E vehicles.',
+    dropdownContent: (
+      <Bulletpoints
+        bulletpoints={[
+          'Driving techniques for vehicles between 3.5 and 7.5 tonnes.',
+          'Safety checks and vehicle maintenance.',
+          'Manoeuvring in urban and rural environments.',
+          'Understanding weight distribution and load security.',
+          'Preparation for the Category C1 driving test.',
+          'Trainees earn a Category C1 license, qualifying them to drive medium-sized vehicles used by courier services, medical transport providers (e.g., ambulances), and small logistics companies.',
+        ]}
+      />
+    ),
   },
   {
     id: 2,
@@ -26,6 +39,18 @@ const COURSES_CARDS = [
     title: 'HGC C',
     content:
       'For beginners looking to start their driving career with rigid vehicles over 7.5 tonnes, excluding trailers, as a foundation before progressing to articulated lorries.',
+    dropdownContent: (
+      <Bulletpoints
+        bulletpoints={[
+          'Driving techniques for vehicles over 7.5 tonnes, excluding trailers.',
+          'Safe loading and unloading techniques.',
+          'Navigating urban and rural routes.',
+          'Safety checks and vehicle maintenance.',
+          'Preparation for the Category C driving test.',
+          'Graduates qualify for driving jobs such as refuse trucks, delivery vehicles, and medium-weight HGVs.',
+        ]}
+      />
+    ),
   },
   {
     id: 3,
@@ -36,6 +61,18 @@ const COURSES_CARDS = [
     title: 'HGC C+E',
     content:
       'For trainees targeting heavy articulated vehicles, like lorries, and advanced logistics roles. Covers vehicles over 7.5 tonnes with trailers above 750 kg.',
+    dropdownContent: (
+      <Bulletpoints
+        bulletpoints={[
+          'Driving techniques for vehicles over 7.5 tonnes, with trailers exceeding 750kg',
+          'Coupling and uncoupling techniques.',
+          'Maneuvering with long trailers.',
+          'Advanced driving techniques for long-haul trips.',
+          'Preparation for the C+E driving test.',
+          'Trainees become eligible for jobs involving articulated trucks or HGVs in logistics companies.',
+        ]}
+      />
+    ),
   },
   {
     id: 4,
@@ -46,6 +83,17 @@ const COURSES_CARDS = [
     title: 'CPC Courses',
     content:
       'Mandatory for professional HGV drivers in the UK and EU, this course is essential for meeting legal requirements and includes a combination of theoretical and practical training.',
+    dropdownContent: (
+      <Bulletpoints
+        bulletpoints={[
+          'Aimed at meeting legal requirements, this course combines theoretical and practical training.',
+          '35 hours of periodic training over five years.',
+          'Modules covering driver safety, efficiency, and road regulations.',
+          'Focus on reducing fuel consumption and minimizing risks.',
+          'Certification allows drivers to work professionally and maintain compliance with legal standards.',
+        ]}
+      />
+    ),
   },
 ];
 
@@ -67,7 +115,6 @@ export default function Page() {
 
       <section
         id='courses'
-        // className='grid h-[2000px] w-full grid-cols-1 grid-rows-[auto,1fr] gap-x-8 gap-y-16 px-4 md:grid-cols-2'
         className='mx-auto flex w-full max-w-[1800px] flex-col gap-x-8 gap-y-16 px-4'
       >
         <div className='mt-[138px] flex h-[calc(100%-138px)] flex-col items-start gap-2 xs:mt-[170px] xs:h-[calc(100%-170px)]'>
@@ -86,6 +133,7 @@ export default function Page() {
               key={card.id}
               imageParams={card.imageParams}
               title={card.title}
+              dropdownContent={card?.dropdownContent}
             >
               {card.content}
             </ProductCards>
