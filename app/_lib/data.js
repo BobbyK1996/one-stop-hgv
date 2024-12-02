@@ -1,4 +1,11 @@
 import { c1Image, cImage, ceImage, cpcImage } from '@/public';
+import {
+  TiSocialInstagramCircular,
+  TiSocialFacebookCircular,
+} from 'react-icons/ti';
+
+import { SiTrustpilot } from 'react-icons/si';
+
 import Bulletpoints from '@components/Bulletpoints';
 
 export const COURSES_CARDS = [
@@ -116,5 +123,30 @@ export const WHY_CHOOSE_ACCORDION = [
 
 export const LOCATION_DETAILS = {
   registeredAddress: 'Your address here',
-  companyNumber: 11625905,
+  companyNumber: 92883761,
+};
+
+export const SOCIALS_DATA = [
+  {
+    logo: <SiTrustpilot />,
+    href: 'https://www.google.co.uk/',
+    newTab: true,
+  },
+  {
+    logo: <TiSocialFacebookCircular />,
+    href: 'https://www.google.co.uk/',
+    newTab: true,
+  },
+  {
+    logo: <TiSocialInstagramCircular />,
+    href: 'https://www.google.co.uk/',
+    newTab: true,
+  },
+];
+
+export const CONTACT_DATA = {
+  address: 'Your address here',
+  addressLink: 'www.google.com',
+  email: 'info@onestophgv.com',
+  phoneNumber: '0208 8290495',
 };
