@@ -84,21 +84,23 @@ export default function Page() {
         className='mx-auto flex max-w-[1800px] flex-col gap-6 px-4 md:flex-row md:items-center'
         id='contact'
       >
-        <div className='mb-16 mt-[138px] flex max-w-md flex-col gap-16 pl-4 xs:mt-[170px] lg:max-w-xl'>
+        <div className='mb-4 mt-[138px] flex flex-col gap-16 pl-4 xs:mt-[170px] md:mb-16'>
           <div>
-            <h1 className='text-5xl lg:text-6xl'>Want to find out more?</h1>
-            <p className='mt-6 text-xl text-black'>
+            <h1 className='text-5xl lg:text-6xl 2xl:text-7xl'>
+              Want to find out more?
+            </h1>
+            <p className='mt-6 text-xl font-bold text-black lg:text-2xl'>
               Call or email us and we'll be happy to answer all of your
               questions.
             </p>
-            <p className='mt-6 text-xl text-black'>
+            <p className='mt-6 text-xl font-bold text-black lg:text-2xl'>
               Alternatively, submit our form and one of our agents will be in
               touch shortly
             </p>
           </div>
           <ContactDetails contact={CONTACT_DATA} />
         </div>
-        <div className='max-w-md flex-grow sm:ml-2 md:ml-auto'>
+        <div className='mb-16 w-full max-w-xl px-4 pl-6 sm:ml-2 md:mb-0 md:ml-auto'>
           <ContactForm />
         </div>
       </section>

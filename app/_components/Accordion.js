@@ -12,7 +12,7 @@ function Accordion({ accordionData }) {
   };
 
   return (
-    <div className='mx-auto flex w-full max-w-2xl flex-col gap-4 xs:px-4'>
+    <div className='ml-auto flex w-full max-w-2xl flex-col gap-4 xs:px-4'>
       {accordionData.map((item, index) => (
         <AccordionItem
           key={index}

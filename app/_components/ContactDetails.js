@@ -1,7 +1,7 @@
 import { IoPhonePortrait, IoMail, IoLocationSharp } from 'react-icons/io5';
 
 const containerClassMain =
-  'flex duration-200 text-start hover:text-primary-500 gap-x-2';
+  'flex duration-200 text-start hover:text-primary-500 gap-x-2 break-all';
 const iconClassMain = 'w-auto text-5xl text-black grow-0 shrink-0';
 const anchorClassMain = 'flex items-center text-2xl';
 
