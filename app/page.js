@@ -3,9 +3,11 @@ import LandingHeading from '@components/LandingHeading';
 import LandingSubHeading from '@components/LandingSubHeading';
 import Button from '@components/Button';
 import ProductCards from '@components/ProductCards';
+import Accordion from '@components/Accordion';
+import ContactDetails from '@components/ContactDetails';
+import ContactForm from '@components/ContactForm';
 
-import { COURSES_CARDS, WHY_CHOOSE_ACCORDION } from '@lib/data';
-import Accordion from './_components/Accordion';
+import { COURSES_CARDS, WHY_CHOOSE_ACCORDION, CONTACT_DATA } from '@lib/data';
 
 export default function Page() {
   return (
@@ -76,6 +78,29 @@ export default function Page() {
           </p>
         </div>
         <Accordion accordionData={WHY_CHOOSE_ACCORDION} />
+      </section>
+
+      <section
+        className='mx-auto flex max-w-[1800px] flex-col gap-6 px-4 md:flex-row md:items-center'
+        id='contact'
+      >
+        <div className='mb-16 mt-[138px] flex max-w-md flex-col gap-16 pl-4 xs:mt-[170px] lg:max-w-xl'>
+          <div>
+            <h1 className='text-5xl lg:text-6xl'>Want to find out more?</h1>
+            <p className='mt-6 text-xl text-black'>
+              Call or email us and we'll be happy to answer all of your
+              questions.
+            </p>
+            <p className='mt-6 text-xl text-black'>
+              Alternatively, submit our form and one of our agents will be in
+              touch shortly
+            </p>
+          </div>
+          <ContactDetails contact={CONTACT_DATA} />
+        </div>
+        <div className='max-w-md flex-grow sm:ml-2 md:ml-auto'>
+          <ContactForm />
+        </div>
       </section>
     </>
   );

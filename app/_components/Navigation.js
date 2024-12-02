@@ -17,6 +17,10 @@ const links = [
     name: 'Why Us',
     address: '#whyus',
   },
+  {
+    name: 'Contact',
+    address: '#contact',
+  },
 ];
 
 function Navigation({ type }) {
