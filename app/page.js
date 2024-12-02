@@ -9,7 +9,7 @@ import { c1Image, cImage, ceImage, cpcImage } from '@/public';
 const COURSES_CARDS = [
   {
     id: 1,
-    parameters: {
+    imageParams: {
       product: c1Image,
       alt: 'HGC C1',
     },
@@ -19,7 +19,7 @@ const COURSES_CARDS = [
   },
   {
     id: 2,
-    parameters: {
+    imageParams: {
       product: cImage,
       alt: 'HGC C',
     },
@@ -29,7 +29,7 @@ const COURSES_CARDS = [
   },
   {
     id: 3,
-    parameters: {
+    imageParams: {
       product: ceImage,
       alt: 'HGC C+E',
     },
@@ -39,7 +39,7 @@ const COURSES_CARDS = [
   },
   {
     id: 4,
-    parameters: {
+    imageParams: {
       product: cpcImage,
       alt: 'CPC Courses',
     },
@@ -84,7 +84,7 @@ export default function Page() {
           {COURSES_CARDS.map((card) => (
             <ProductCards
               key={card.id}
-              parameters={card.parameters}
+              imageParams={card.imageParams}
               title={card.title}
             >
               {card.content}
