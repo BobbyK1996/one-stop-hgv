@@ -5,7 +5,8 @@ function NavLink({
   address,
   isActive,
   onClick,
-  customCSS,
+  customCSSLi,
+  customCSSLink,
   effects = true,
 }) {
   const targetUrl = address.startsWith('#') ? `/${address}` : address;
@@ -32,11 +33,11 @@ function NavLink({
 
   return (
     <li
-      className={`relative flex transition-all duration-300 ${beforeAfterClasses} ${textClasses} ${hoverTextClasses} ${customCSS}`}
+      className={`relative flex transition-all duration-300 ${beforeAfterClasses} ${textClasses} ${hoverTextClasses} ${customCSSLi}`}
     >
       <Link
         href={targetUrl}
-        className={`relative z-10 inline-block w-full p-5 text-center ${linkBeforeClasses} hover:before:scale-x-100 hover:before:scale-y-[65%] ${isActive && 'before:scale-x-100 before:scale-y-[65%]'}`}
+        className={`relative z-10 inline-block w-full p-5 text-center ${linkBeforeClasses} hover:before:scale-x-100 hover:before:scale-y-[65%] ${isActive && 'before:scale-x-100 before:scale-y-[65%]'} ${customCSSLink}`}
         onClick={onClick}
       >
         {name}

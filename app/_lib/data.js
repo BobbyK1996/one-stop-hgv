@@ -113,3 +113,8 @@ export const WHY_CHOOSE_ACCORDION = [
       'We help you prepare for the next steps, whether it’s securing your first job or preparing for interviews.',
   },
 ];
+
+export const LOCATION_DETAILS = {
+  registeredAddress: 'Your address here',
+  companyNumber: 11625905,
+};

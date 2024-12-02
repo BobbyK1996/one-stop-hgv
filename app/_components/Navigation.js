@@ -100,6 +100,7 @@ function Navigation({ type }) {
               name='Home'
               address='/'
               isActive={derivedNav === '/'}
+              customCSSLink='py-2 !text-left'
               onClick={() => setCurrentNav('/')}
               effects={false}
             />
@@ -110,7 +111,7 @@ function Navigation({ type }) {
                   name={link.name}
                   address={link.address}
                   isActive={derivedNav === link.address}
-                  customCSS='pb-1'
+                  customCSSLink='py-2 !text-left'
                   onClick={() => setCurrentNav(link.address)}
                   effects={false}
                 />
@@ -120,6 +121,7 @@ function Navigation({ type }) {
               name='Terms & Conditions'
               address='termsconditions'
               isActive={derivedNav === '/termsconditions'}
+              customCSSLink='py-2 !text-left'
               onClick={() => setCurrentNav('/termsconditions')}
               effects={false}
             />
