@@ -12,7 +12,7 @@ function AccordionItem({ title, content }) {
   return (
     <div className='text-3xl text-white border border-gray-300 rounded-md'>
       <button
-        className={`flex h-full w-full items-center justify-center gap-x-10 bg-primary-600 p-4 text-left font-medium hover:bg-gray-200 ${!isOpen ? 'rounded-md' : 'rounded-t-md'} transition-colors duration-200 hover:bg-primary-400`}
+        className={`flex h-full w-full items-center justify-center gap-x-4 bg-primary-600 p-4 text-left font-medium hover:bg-gray-200 ${!isOpen ? 'rounded-md' : 'rounded-t-md'} text-xl transition-colors duration-200 hover:bg-primary-400 sm:text-2xl 2xl:text-3xl`}
         onClick={toggleAccordion}
       >
         {title}

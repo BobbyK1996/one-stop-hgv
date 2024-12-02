@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import AccordionItem from './AccordionItem';
+
+import AccordionItem from '@components/AccordionItem';
 
 function ProductCards({ children, imageParams, title, dropdownContent }) {
   return (
@@ -14,7 +15,7 @@ function ProductCards({ children, imageParams, title, dropdownContent }) {
         <p className='h-64 mt-4 mb-8 text-lg sm:h-44 xl:h-64 2xl:h-44'>
           {children}
         </p>
-        <AccordionItem title='test' content={dropdownContent} />
+        <AccordionItem title='Show more' content={dropdownContent} />
       </div>
     </div>
   );
