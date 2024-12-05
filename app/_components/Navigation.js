@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from 'react';
 
-import NavLink from '@components/NavLink';
-
 import { IoMdCloseCircle, IoMdMenu } from 'react-icons/io';
 
+import { scrollToWithOffset } from '@helpers/indexClientHelpers';
+
 import { useNavigation } from '@/app/context/navigationContext';
+
+import NavLink from '@components/NavLink';
 
 const links = [
   {
@@ -105,9 +107,20 @@ function Navigation({ type }) {
               address='/'
               isActive={derivedNav === '/'}
               customCSSLink='py-2 !text-left'
-              onClick={() => setCurrentNav('/')}
+              onClick={(e) => {
+                e.preventDefault();
+                if (
+                  window.location.pathname === '/' &&
+                  document.getElementById('home')
+                ) {
+                  scrollToWithOffset('home', 170, () => setCurrentNav('/'));
+                } else {
+                  setCurrentNav('/');
+                }
+              }}
               effects={false}
             />
+            {/* // onClick={() => setCurrentNav('/')} */}
             {links.map((link, index) => {
               return (
                 <NavLink

@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { scrollToWithOffset } from '@helpers/indexClientHelpers';
+
 function NavLink({
   name,
   address,
@@ -9,6 +11,23 @@ function NavLink({
   customCSSLink,
   effects = true,
 }) {
+  const handleClick = (e) => {
+    if (address.startsWith('#')) {
+      if (window.location.pathname !== '/') {
+        return;
+      }
+
+      e.preventDefault();
+      const targetId = address.substring(1);
+      scrollToWithOffset(targetId, 170, onClick);
+      return;
+    }
+
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
   const targetUrl = address.startsWith('#') ? `/${address}` : address;
 
   const beforeAfterClasses = effects
@@ -38,7 +57,7 @@ function NavLink({
       <Link
         href={targetUrl}
         className={`relative z-10 inline-block w-full p-5 text-center ${linkBeforeClasses} hover:before:scale-x-100 hover:before:scale-y-[65%] ${isActive && 'before:scale-x-100 before:scale-y-[65%]'} ${customCSSLink}`}
-        onClick={onClick}
+        onClick={handleClick}
       >
         {name}
       </Link>

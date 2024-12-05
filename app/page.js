@@ -29,7 +29,7 @@ export default function Page() {
         id='courses'
         className='mx-auto flex w-full max-w-[1800px] flex-col gap-x-8 gap-y-16 px-4'
       >
-        <div className='mt-[138px] flex h-[calc(100%-138px)] flex-col items-start gap-6 px-4 xs:mt-[170px] xs:h-[calc(100%-170px)] md:px-8 lg:px-12 xl:px-4 2xl:px-6'>
+        <div className='flex h-[calc(100%-138px)] flex-col items-start gap-6 px-4 xs:mt-10 xs:h-[calc(100%-170px)] md:px-8 lg:px-12 xl:px-4 2xl:px-6'>
           <h1 className='relative text-6xl text-white after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-24 after:-translate-x-2/4 after:bg-white sm:text-7xl lg:text-8xl'>
             Courses
           </h1>
@@ -54,10 +54,10 @@ export default function Page() {
       </section>
 
       <section
-        className='mx-auto my-32 grid w-full max-w-[1800px] grid-cols-1 gap-x-8 gap-y-10 px-4 md:grid-cols-2 md:gap-y-20'
+        className='mx-auto my-20 grid w-full max-w-[1800px] grid-cols-1 gap-x-8 gap-y-10 px-4 md:grid-cols-2 md:gap-y-20'
         id='whyus'
       >
-        <span className='mt-[138px] flex items-center text-center xs:mt-[170px] md:col-span-2 md:px-8 lg:px-12 xl:px-4 2xl:items-start 2xl:px-6'>
+        <span className='flex items-center text-center xs:mt-10 md:col-span-2 md:px-8 lg:px-12 xl:px-4 2xl:items-start 2xl:px-6'>
           <h1 className='relative text-6xl text-white after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-24 after:-translate-x-2/4 after:bg-white sm:text-7xl lg:text-8xl'>
             Why Choose One Stop HGV?
           </h1>
@@ -81,10 +81,10 @@ export default function Page() {
       </section>
 
       <section
-        className='mx-auto flex max-w-[1800px] flex-col gap-6 px-4 md:flex-row md:items-center'
+        className='mx-auto flex min-h-[800px] max-w-[1800px] flex-col gap-6 px-4 md:flex-row md:items-center'
         id='contact'
       >
-        <div className='mb-4 mt-[138px] flex flex-col gap-16 pl-4 xs:mt-[170px] md:mb-16'>
+        <div className='mb-4 flex flex-col gap-16 pl-4 xs:mt-10 md:mb-16'>
           <div>
             <h1 className='text-5xl lg:text-6xl 2xl:text-7xl'>
               Want to find out more?

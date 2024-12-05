@@ -58,8 +58,6 @@ async function sendContactForm(formData) {
 
     const body = generateEmailBody(name, email, message);
 
-    console.log(body);
-
     await sendMail({
       to: 'bobby@tttechrec.com',
       subject: `New Message from ${name}`,
