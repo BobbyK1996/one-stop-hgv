@@ -29,6 +29,8 @@ function Navigation({ type }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const { derivedNav, setCurrentNav } = useNavigation();
 
+  const toggleNav = () => setMenuOpen((prev) => !prev);
+
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add('overflow-hidden');
@@ -82,7 +84,19 @@ function Navigation({ type }) {
                   address='/'
                   isActive={derivedNav === '/'}
                   customCSS='py-2 text-2xl min-w-72 text-white'
-                  onClick={() => setCurrentNav('/')}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (
+                      window.location.pathname === '/' &&
+                      document.getElementById('home')
+                    ) {
+                      scrollToWithOffset('home', 170, () => setCurrentNav('/'));
+                    } else {
+                      setCurrentNav('/');
+                    }
+
+                    toggleNav();
+                  }}
                 />
 
                 {links.map((link, index) => (
@@ -92,7 +106,10 @@ function Navigation({ type }) {
                     address={link.address}
                     isActive={derivedNav === link.address}
                     customCSS='py-2 text-2xl min-w-72 text-white'
-                    onClick={() => setCurrentNav(link.address)}
+                    onClick={() => {
+                      setCurrentNav(link.address);
+                      toggleNav();
+                    }}
                   />
                 ))}
               </ul>

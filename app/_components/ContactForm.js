@@ -13,6 +13,7 @@ import {
 } from '@helpers/indexShared';
 
 import Spinner from '@components/Spinner';
+import useMediaQuery from '@lib/hooks/useMediaQuery';
 
 const formItemStyles =
   'block w-full p-3 text-white duration-700 ease-in-out border-gray-300 rounded-sm shadow-sm hover:bg-primary-500 placeholder-slate-400 hover:placeholder-white focus:outline-none active:color-slate-500';
@@ -21,6 +22,8 @@ const EMAIL_FORM_RECAPTCHA_SITEKEY = '6LdOG5MqAAAAAJr1F38S2hB76OjZEuqSOdN6F692';
 
 function Contactform() {
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  const isMobile = useMediaQuery('(max-width: 425px)');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -129,13 +132,24 @@ function Contactform() {
           </div>
 
           <div>
-            <ReCAPTCHA
-              key='recaptcha-compact'
-              sitekey={EMAIL_FORM_RECAPTCHA_SITEKEY}
-              onChange={(token) =>
-                dispatch({ type: 'SET_RECAPTCHA_TOKEN', payload: token })
-              }
-            />
+            {isMobile ? (
+              <ReCAPTCHA
+                key='recaptcha-compact'
+                sitekey={EMAIL_FORM_RECAPTCHA_SITEKEY}
+                onChange={(token) =>
+                  dispatch({ type: 'SET_RECAPTCHA_TOKEN', payload: token })
+                }
+                size='compact'
+              />
+            ) : (
+              <ReCAPTCHA
+                key='recaptcha-normal'
+                sitekey={EMAIL_FORM_RECAPTCHA_SITEKEY}
+                onChange={(token) =>
+                  dispatch({ type: 'SET_RECAPTCHA_TOKEN', payload: token })
+                }
+              />
+            )}
           </div>
 
           <div className='flex items-center justify-start gap-6'>
