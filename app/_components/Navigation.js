@@ -67,7 +67,6 @@ function Navigation({ type }) {
               <li>
                 <Button
                   href='#contact'
-                  scrollTo={{ targetId: 'contact', offset: 170 }}
                   customCSS='text-white hover:text-primary-600 hover:bg-white hover:border-primary-600 py-2'
                   isActive={derivedNav === '#contact'}
                   onClick={() => setCurrentNav('#contact')}

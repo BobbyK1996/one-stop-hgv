@@ -14,17 +14,20 @@ function Button({
   onSubmit,
   onClick,
   customCSS,
-  scrollTo,
   isActive,
 }) {
-  const handleClick = (e) => {
-    if (scrollTo) {
-      const { targetId, offset = 0 } = scrollTo;
+  const targetUrl = href.startsWith('#') ? `/${href}` : href;
 
-      if (href?.startsWith('#')) {
-        e.preventDefault();
-        scrollToWithOffset(targetId, offset);
+  const handleClick = (e) => {
+    if (href.startsWith('#')) {
+      if (window.location.pathname !== '/') {
+        return;
       }
+
+      e.preventDefault();
+      const targetId = href.substring(1);
+      scrollToWithOffset(targetId, 170, onClick);
+      return;
     }
 
     if (onClick) {
@@ -34,7 +37,7 @@ function Button({
 
   return href ? (
     <Link
-      href={href}
+      href={targetUrl}
       className={`${buttonTypes.link} ${customCSS} ${isActive && 'border-primary-600 bg-white !text-primary-600'}`}
       onClick={handleClick}
     >
