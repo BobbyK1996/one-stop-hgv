@@ -2,15 +2,15 @@ function HeaderAndText({ header, children, index: outerIndex }) {
   const isContentArray = Array.isArray(children);
 
   return (
-    <div className='flex flex-col'>
+    <div key={outerIndex} className='flex flex-col'>
+      {' '}
+      {/* Add key to the outer div */}
       {header && (
         <h1 className="text-accent-300 relative mb-4 inline-block border-b border-primary-200 text-3xl duration-200 ease-in-out before:absolute before:bottom-0 before:left-0 before:w-full before:origin-bottom-left before:scale-x-0 before:scale-y-0 before:border-b-2 before:border-l-2 before:border-primary-200 before:transition-transform before:duration-300 before:ease-in-out before:content-[''] after:absolute after:right-0 after:top-0 after:w-full after:origin-top-right after:scale-x-0 after:scale-y-0 after:border-r-2 after:border-t-2 after:border-primary-200 after:transition-transform after:duration-300 after:ease-in-out after:content-[''] hover:border-transparent hover:before:scale-x-100 hover:before:scale-y-100 hover:after:scale-x-100 hover:after:scale-y-100 sm:text-4xl">
           {header}
         </h1>
       )}
-
       {!isContentArray && children}
-
       {isContentArray && (
         <ul>
           {children.map((item, itemIndex) => {
