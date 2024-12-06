@@ -16,11 +16,6 @@ function Page() {
               {textItem.content}
             </HeaderAndText>
           ))}
-          <p className='text-sm text-slate-400'>
-            [Company Name] is an equal opportunity employer. We celebrate
-            diversity and are committed to creating an inclusive environment for
-            all employees.
-          </p>
         </div>
       </div>
     </section>
