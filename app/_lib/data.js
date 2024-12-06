@@ -150,3 +150,169 @@ export const CONTACT_DATA = {
   email: 'info@onestophgv.com',
   phoneNumber: '0208 8290495',
 };
+
+export const dataArray = [
+  {
+    header: 'Introduction',
+    content: [
+      {
+        mainContent:
+          'These terms and conditions (“Terms”) govern the agreement between One Stop HGV (“we,” “us,” or “our”) and the individual (“you” or “your”) enrolling in our HGV training programs.',
+      },
+      {
+        mainContent:
+          'By booking and attending our courses, you agree to comply with these Terms.',
+      },
+    ],
+  },
+  {
+    header: 'Eligibility',
+    content: [
+      {
+        mainContent: 'You must meet the following requirements to enroll:',
+        subContent: [
+          'Be at least 18 years old.',
+          'Hold a valid UK driving license or provisional license with the correct HGV entitlement.',
+          'Be medically fit to operate heavy goods vehicles, as certified by a DVLA-approved medical examiner.',
+        ],
+      },
+      {
+        mainContent:
+          'It is your responsibility to ensure you meet these criteria before booking.',
+      },
+    ],
+  },
+  {
+    header: 'Booking and Payments',
+    content: [
+      {
+        mainContent:
+          'A booking is confirmed only upon receipt of a completed application form and payment of the required deposit or full course fee.',
+      },
+      {
+        mainContent:
+          'All course fees must be paid in full no later than [X days] before the course start date.',
+      },
+      {
+        mainContent:
+          'Payment plans may be available at our discretion. Late payments may result in additional charges or cancellation of your booking.',
+      },
+    ],
+  },
+  {
+    header: 'Cancellations and Refunds',
+    content: [
+      {
+        mainContent:
+          '1.	Cancellations made more than [X days] before the start date: [X]% refund.',
+      },
+      {
+        mainContent: '2.	Cancellations made within [X days]: No refund',
+        subContent: [
+          'If we cancel or reschedule your course, you will be offered an alternative date or a full refund.',
+          'No refunds will be given for failure to attend the course or failure to meet the eligibility requirements.',
+        ],
+      },
+    ],
+  },
+  {
+    header: 'Course Rescheduling',
+    content: [
+      {
+        mainContent:
+          'You may request to reschedule your course with at least [X days] notice before the start date, subject to availability. An administration fee of [£X] may apply.',
+      },
+    ],
+  },
+  {
+    header: 'Course Attendance and Conduct',
+    content: [
+      {
+        mainContent:
+          'You must attend all scheduled sessions and adhere to the start and finish times provided.',
+      },
+      {
+        mainContent:
+          'If you are late, we may not be able to accommodate you, and no refund will be given.',
+      },
+      {
+        mainContent:
+          'You must behave respectfully toward staff and other trainees. Any abusive or disruptive behavior may result in removal from the course without a refund.',
+      },
+    ],
+  },
+  {
+    header: 'Examinations and Certification',
+    content: [
+      {
+        mainContent:
+          'We provide training to prepare you for the HGV driving test; however, we do not guarantee you will pass.',
+      },
+      {
+        mainContent:
+          'Additional training and test attempts can be booked at an additional cost.',
+      },
+    ],
+  },
+  {
+    header: 'Liability',
+    content: [
+      {
+        mainContent: 'We are not responsible for:',
+        subContent: [
+          'Loss of income or employment opportunities due to failure to pass tests.',
+          'Personal property damage or loss during training sessions.',
+        ],
+      },
+      {
+        mainContent:
+          'Our liability is limited to the total fees paid for your course.',
+      },
+    ],
+  },
+  {
+    header: 'Data Protection',
+    content: [
+      {
+        mainContent:
+          'Your personal information will be handled in accordance with the General Data Protection Regulation (GDPR).',
+      },
+      {
+        mainContent:
+          'We may use your data to contact you about your course, certifications, and relevant promotions.',
+      },
+    ],
+  },
+  {
+    header: 'Amendments to Terms and Conditions',
+    content: [
+      {
+        mainContent:
+          'We reserve the right to amend these Terms at any time. Changes will be communicated to you in writing or via email.',
+      },
+    ],
+  },
+  {
+    header: 'Governing Law',
+    content: [
+      {
+        mainContent:
+          'These Terms are governed by the laws of [England and Wales/Scotland/Northern Ireland]. Any disputes shall be subject to the exclusive jurisdiction of the courts of [your jurisdiction].',
+      },
+    ],
+  },
+  {
+    header: 'Contact Information',
+    content: [
+      {
+        mainContent:
+          'For any questions or concerns regarding these Terms, please contact us:',
+        subContent: [
+          'Email: [your email]',
+          'Phone: [your phone number]',
+          'Address: [your business address]',
+        ],
+      },
+    ],
+  },
+];
