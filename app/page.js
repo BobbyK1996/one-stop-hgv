@@ -21,7 +21,12 @@ export default function Page() {
         <div className='mt-[138px] flex flex-col gap-10 border-green-600 px-4 py-10 xs:mt-[170px] md:px-10 md:py-20 lg:px-20 lg:py-28 xl:px-28 xl:py-40'>
           <LandingHeading />
           <LandingSubHeading />
-          <Button href='#contact'>Call now!</Button>
+          <Button
+            href='#contact'
+            scrollTo={{ targetId: 'contact', offset: 170 }}
+          >
+            Call now!
+          </Button>
         </div>
       </section>
 
@@ -39,7 +44,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className='grid grid-cols-1 gap-x-8 gap-y-16 px-4 md:grid-cols-2 xl:grid-cols-4'>
+        <div className='grid grid-cols-1 px-4 gap-x-8 gap-y-16 md:grid-cols-2 xl:grid-cols-4'>
           {COURSES_CARDS.map((card) => (
             <ProductCards
               key={card.id}
@@ -81,10 +86,10 @@ export default function Page() {
       </section>
 
       <section
-        className='mx-auto flex min-h-[800px] max-w-[1800px] flex-col gap-6 px-4 md:flex-row md:items-center'
+        className='mx-auto flex min-h-[600px] max-w-[1800px] flex-col gap-6 px-4 md:flex-row md:items-center'
         id='contact'
       >
-        <div className='mb-4 flex flex-col gap-16 pl-4 xs:mt-10 md:mb-16'>
+        <div className='flex flex-col gap-16 pl-4 mb-4 xs:mt-10 md:mb-16'>
           <div>
             <h1 className='text-5xl lg:text-6xl 2xl:text-7xl'>
               Want to find out more?
@@ -100,7 +105,7 @@ export default function Page() {
           </div>
           <ContactDetails contact={CONTACT_DATA} />
         </div>
-        <div className='mb-16 w-full max-w-xl px-4 pl-6 sm:ml-2 md:mb-0 md:ml-auto'>
+        <div className='w-full max-w-xl px-4 pl-6 mb-16 sm:ml-2 md:mb-0 md:ml-auto 2xl:max-w-2xl'>
           <ContactForm />
         </div>
       </section>

@@ -37,10 +37,10 @@ function NavLink({
   const textClasses = effects
     ? isActive
       ? 'text-white before:translate-y-full before:opacity-100 after:-translate-y-full after:opacity-100'
-      : 'text-black before:-translate-y-6 before:opacity-0 after:translate-y-6 after:opacity-0'
+      : 'text-slate-800 before:-translate-y-6 before:opacity-0 after:translate-y-6 after:opacity-0'
     : isActive
       ? 'text-primary-600'
-      : 'text-black';
+      : 'text-slate-800';
 
   const hoverTextClasses = effects
     ? 'hover:text-white'

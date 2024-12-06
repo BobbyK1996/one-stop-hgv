@@ -9,6 +9,7 @@ import { scrollToWithOffset } from '@helpers/indexClientHelpers';
 import { useNavigation } from '@/app/context/navigationContext';
 
 import NavLink from '@components/NavLink';
+import Button from './Button';
 
 const links = [
   {
@@ -50,8 +51,8 @@ function Navigation({ type }) {
       <nav>
         {!isFooter && (
           <>
-            <ul className='hidden items-center gap-8 text-xl text-black sm:flex lg:gap-12'>
-              {links.map((link, index) => {
+            <ul className='items-center hidden gap-8 text-2xl text-black sm:flex lg:gap-12'>
+              {links.slice(0, -1).map((link, index) => {
                 return (
                   <NavLink
                     key={index}
@@ -62,11 +63,23 @@ function Navigation({ type }) {
                   />
                 );
               })}
+
+              <li>
+                <Button
+                  href='#contact'
+                  scrollTo={{ targetId: 'contact', offset: 170 }}
+                  customCSS='text-white hover:text-primary-600 hover:bg-white hover:border-primary-600 py-2'
+                  isActive={derivedNav === '#contact'}
+                  onClick={() => setCurrentNav('#contact')}
+                >
+                  Contact
+                </Button>
+              </li>
             </ul>
 
             <div
               onClick={() => setMenuOpen((prev) => !prev)}
-              className='relative z-30 cursor-pointer select-none text-3xl text-black sm:hidden'
+              className='relative z-30 text-3xl text-black cursor-pointer select-none sm:hidden'
             >
               {menuOpen ? <IoMdCloseCircle /> : <IoMdMenu />}
             </div>
@@ -74,16 +87,16 @@ function Navigation({ type }) {
             <div
               className={`fixed top-[138px] z-20 h-[calc(100%-138px)] w-full backdrop-blur-md duration-500 ease-in-out xs:top-[170px] xs:h-[calc(100%-170px)] ${
                 menuOpen
-                  ? 'backdrop-blur-gradient left-0 sm:hidden'
+                  ? 'left-0 backdrop-blur-2xl sm:hidden'
                   : 'left-[-100%] p-10'
               }`}
             >
-              <ul className='flex w-full flex-col items-center justify-end gap-10 pb-4 pt-12'>
+              <ul className='flex flex-col items-center justify-end w-full gap-10 pt-12 pb-4 text-2xl font-bold'>
                 <NavLink
                   name='Home'
                   address='/'
                   isActive={derivedNav === '/'}
-                  customCSS='py-2 text-2xl min-w-72 text-white'
+                  customCSS='py-2 min-w-72'
                   onClick={(e) => {
                     e.preventDefault();
                     if (
