@@ -15,6 +15,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
+      <link
+        rel='preload'
+        href='https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJLucHtA.woff2'
+        as='font'
+        type='font/woff2'
+        crossOrigin='anonymous'
+      />
       <body
         className={`${poppins} relative -z-10 min-h-screen w-full overflow-x-hidden bg-primary-600 font-poppins text-white`}
       >
