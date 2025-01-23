@@ -13,9 +13,9 @@ export const COURSES_CARDS = [
     id: 1,
     imageParams: {
       product: c1Image,
-      alt: 'HGC C1',
+      alt: 'HGV C1',
     },
-    title: 'HGC C1',
+    title: 'HGV C1',
     content:
       'Category C1 training covers vehicles heavier than standard vans, like ambulances, delivery trucks, and small HGVs, ideal for roles not needing larger Category C or C+E vehicles.',
     dropdownContent: (
@@ -35,9 +35,9 @@ export const COURSES_CARDS = [
     id: 2,
     imageParams: {
       product: cImage,
-      alt: 'HGC C',
+      alt: 'HGV C',
     },
-    title: 'HGC C',
+    title: 'HGV C',
     content:
       'For beginners looking to start their driving career with rigid vehicles over 7.5 tonnes, excluding trailers, as a foundation before progressing to articulated lorries.',
     dropdownContent: (
@@ -57,9 +57,9 @@ export const COURSES_CARDS = [
     id: 3,
     imageParams: {
       product: ceImage,
-      alt: 'HGC C+E',
+      alt: 'HGV C+E',
     },
-    title: 'HGC C+E',
+    title: 'HGV C+E',
     content:
       'For trainees targeting heavy articulated vehicles, like lorries, and advanced logistics roles. Covers vehicles over 7.5 tonnes with trailers above 750 kg.',
     dropdownContent: (
