@@ -4,8 +4,6 @@ import { poppins } from '@lib/fonts';
 
 import { NavigationProvider } from '@/app/context/navigationContext';
 
-import { logoPNG } from '@/public';
-
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 
