@@ -4,6 +4,8 @@ import { poppins } from '@lib/fonts';
 
 import { NavigationProvider } from '@/app/context/navigationContext';
 
+import { logoPNG } from '@/public';
+
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 
@@ -13,6 +15,10 @@ export const metadata = {
     'One Stop HGV offers comprehensive HGV training services, helping you gain the skills and qualifications needed to start or advance your career in heavy goods vehicle driving. With experienced instructors, flexible training options, and a commitment to your success, we make becoming a certified HGV driver easy and accessible.',
   twitter: {
     card: 'summary_large_image',
+  },
+  openGraph: {
+    url: 'https://www.onestophgv.com/',
+    type: 'website',
   },
 };
 
