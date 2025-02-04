@@ -30,11 +30,12 @@ function AccordionItem({ title, content, currentState, stateFunc, type }) {
         </span>
       </button>
 
-      {isOpen && (
-        <div className='rounded-b-md bg-off-white p-4 text-lg text-slate-600'>
-          <span>{content}</span>
-        </div>
-      )}
+      <div
+        className={`overflow-hidden rounded-b-md bg-off-white text-lg text-slate-600 transition-all duration-300 ${isOpen ? 'max-h-[1000px] p-4 opacity-100' : 'max-h-0 py-0 opacity-0'}`}
+        aria-hidden={!isOpen}
+      >
+        <span>{content}</span>
+      </div>
     </div>
   );
 }
