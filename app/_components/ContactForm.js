@@ -67,8 +67,11 @@ function Contactform() {
         <Spinner />
       ) : (
         <>
-          <div>
-            <label htmlFor='name' className='hidden'></label>
+          <fieldset className='space-y-4'>
+            <legend className='sr-only'>Contact Information</legend>
+            <label htmlFor='name' className='sr-only'>
+              Full Name
+            </label>
             <input
               type='text'
               id='name'
@@ -87,10 +90,10 @@ function Contactform() {
                   : 'bg-white'
               } `}
             />
-          </div>
 
-          <div>
-            <label htmlFor='email' className='hidden'></label>
+            <label htmlFor='email' className='sr-only'>
+              Email
+            </label>
             <input
               type='email'
               id='email'
@@ -109,10 +112,10 @@ function Contactform() {
                   : 'bg-white'
               }`}
             />
-          </div>
 
-          <div>
-            <label htmlFor='message' className='hidden'></label>
+            <label htmlFor='message' className='sr-only'>
+              Message
+            </label>
             <textarea
               id='message'
               name='message'
@@ -129,9 +132,10 @@ function Contactform() {
                   : 'bg-white'
               }`}
             />
-          </div>
+          </fieldset>
 
-          <div>
+          <fieldset>
+            <legend className='sr-only'>Security Verification</legend>
             {isMobile ? (
               <ReCAPTCHA
                 key='recaptcha-compact'
@@ -150,18 +154,20 @@ function Contactform() {
                 }
               />
             )}
-          </div>
+          </fieldset>
 
           <div className='flex items-center justify-start gap-6'>
             <button
               type='submit'
-              className='rounded bg-primary-400 px-4 py-2 text-white sm:px-6 sm:py-4'
+              className='px-4 py-2 text-white rounded bg-primary-400 sm:px-6 sm:py-4'
+              aria-label='Submit Contact Form'
             >
               Submit
             </button>
 
             {state.sendStatus && (
               <span
+                role='alert'
                 className={`rounded-sm p-2 text-center sm:px-6 sm:py-4 ${
                   state.sendStatus === 'success'
                     ? 'bg-green-300 text-green-600'

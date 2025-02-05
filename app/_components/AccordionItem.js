@@ -20,7 +20,7 @@ function AccordionItem({ title, content, currentState, stateFunc, type }) {
   return (
     <div className='rounded-md text-3xl text-white'>
       <button className={`${accordionTypes[type]}`} onClick={toggleAccordion}>
-        <div className='text-left'>{title}</div>
+        <h3 className='text-left'>{title}</h3>
         <span
           className={`transform transition-transform ${
             isOpen ? 'rotate-180' : ''
