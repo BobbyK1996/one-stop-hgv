@@ -28,9 +28,11 @@ function Logo() {
         // src='/logo.png'
         src={logoPNG}
         height={90}
-        alt='One Stop HGV Logo'
+        width={147}
+        alt='One Stop HGV - Professional HGV Training Services Logo'
         className='h-auto'
         priority
+        aria-label='Go to One Stop HGV Homepage'
       />
     </Link>
   );
