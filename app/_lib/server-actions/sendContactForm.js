@@ -59,7 +59,7 @@ async function sendContactForm(formData) {
     const body = generateEmailBody(name, email, message);
 
     await sendMail({
-      to: 'bobby@tttechrec.com',
+      to: 'info@roadreadyhgv.com',
       subject: `New Message from ${name}`,
       body: body,
     });
