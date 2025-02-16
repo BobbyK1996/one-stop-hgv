@@ -145,9 +145,9 @@ export const SOCIALS_DATA = [
 ];
 
 export const CONTACT_DATA = {
-  address: 'Your address here',
-  addressLink: 'www.google.com',
-  email: 'info@onestophgv.com',
+  // address: 'Your address here',
+  // addressLink: 'www.google.com',
+  email: 'info@roadreadyhgv.com',
   phoneNumber: '0208 8290495',
 };
 
@@ -157,7 +157,7 @@ export const dataArray = [
     content: [
       {
         mainContent:
-          'These terms and conditions (“Terms”) govern the agreement between One Stop HGV (“we,” “us,” or “our”) and the individual (“you” or “your”) enrolling in our HGV training programs.',
+          'These terms and conditions (“Terms”) govern the agreement between Road Ready HGV (“we,” “us,” or “our”) and the individual (“you” or “your”) enrolling in our HGV training programs.',
       },
       {
         mainContent:
@@ -308,7 +308,7 @@ export const dataArray = [
         mainContent:
           'For any questions or concerns regarding these Terms, please contact us:',
         subContent: [
-          'Email: [your email]',
+          'Email: info@roadreadyhgv.com',
           'Phone: [your phone number]',
           'Address: [your business address]',
         ],

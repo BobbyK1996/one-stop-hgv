@@ -24,7 +24,7 @@ function ContactDetails({
         </a>
       </div>
 
-      <div className={containerClassMain}>
+      {/* <div className={containerClassMain}>
         <IoLocationSharp className={iconClassMain} />
         <a
           href={addressLink}
@@ -34,7 +34,7 @@ function ContactDetails({
         >
           {address}
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }

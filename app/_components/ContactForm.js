@@ -18,7 +18,7 @@ import useMediaQuery from '@lib/hooks/useMediaQuery';
 const formItemStyles =
   'block w-full p-3 text-white duration-700 ease-in-out border-gray-300 rounded-sm shadow-sm hover:bg-primary-500 placeholder-slate-400 hover:placeholder-white focus:outline-none active:color-slate-500';
 
-const EMAIL_FORM_RECAPTCHA_SITEKEY = '6LdOG5MqAAAAAJr1F38S2hB76OjZEuqSOdN6F692';
+const EMAIL_FORM_RECAPTCHA_SITEKEY = '6LdGOtkqAAAAACcap5_p2q6TY18QeHt-nRaoXGi_';
 
 function Contactform() {
   const [state, dispatch] = useReducer(reducer, initialState);
