@@ -44,7 +44,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className='grid grid-cols-1 gap-x-8 gap-y-16 px-4 md:grid-cols-2 xl:grid-cols-4'>
+        <div className='grid grid-cols-1 px-4 gap-x-8 gap-y-16 md:grid-cols-2 xl:grid-cols-4'>
           {COURSES_CARDS.map((card) => (
             <ProductCards
               key={card.id}
@@ -64,7 +64,7 @@ export default function Page() {
       >
         <span className='flex items-center text-center xs:mt-10 md:col-span-2 md:px-8 lg:px-12 xl:px-4 2xl:items-start 2xl:px-6'>
           <h1 className='relative text-6xl text-white after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-24 after:-translate-x-2/4 after:bg-white sm:text-7xl lg:text-8xl'>
-            Why Choose One Stop HGV?
+            Why Choose Road Ready HGV?
           </h1>
         </span>
         <div className='space-y-10 xs:pl-4'>
@@ -77,7 +77,7 @@ export default function Page() {
             training, we’re here to help every step of the way.
           </p>
           <p className='text-lg font-bold text-white sm:text-xl lg:text-2xl'>
-            At One Stop HGV, we make the process as smooth and stress-free as
+            At Road Ready HGV, we make the process as smooth and stress-free as
             possible, focusing on the administrative side while you concentrate
             on your training
           </p>
@@ -89,7 +89,7 @@ export default function Page() {
         className='mx-auto flex min-h-[600px] max-w-[1800px] flex-col gap-6 px-4 md:flex-row md:items-center'
         id='contact'
       >
-        <div className='mb-4 flex flex-col gap-16 pl-4 xs:mt-10 md:mb-16'>
+        <div className='flex flex-col gap-16 pl-4 mb-4 xs:mt-10 md:mb-16'>
           <div>
             <h1 className='text-5xl lg:text-6xl 2xl:text-7xl'>
               Want to find out more?
@@ -105,7 +105,7 @@ export default function Page() {
           </div>
           <ContactDetails contact={CONTACT_DATA} />
         </div>
-        <div className='mb-16 w-full max-w-xl px-4 pl-6 sm:ml-2 md:mb-0 md:ml-auto 2xl:max-w-2xl'>
+        <div className='w-full max-w-xl px-4 pl-6 mb-16 sm:ml-2 md:mb-0 md:ml-auto 2xl:max-w-2xl'>
           <ContactForm />
         </div>
       </section>
