@@ -127,11 +127,11 @@ export const LOCATION_DETAILS = {
 };
 
 export const SOCIALS_DATA = [
-  {
-    logo: <SiTrustpilot />,
-    href: 'https://www.google.co.uk/',
-    newTab: true,
-  },
+  // {
+  //   logo: <SiTrustpilot />,
+  //   href: 'https://www.google.co.uk/',
+  //   newTab: true,
+  // },
   {
     logo: <TiSocialFacebookCircular />,
     href: 'https://www.google.co.uk/',
