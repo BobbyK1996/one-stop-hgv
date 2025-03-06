@@ -1,10 +1,10 @@
 function CallPrompt() {
   return (
     <a
-      href='tel:+442088290495'
-      className='xs:rounded-b-xl mx-auto flex h-8 w-full max-w-80 items-center justify-center bg-black sm:ml-auto sm:mr-10'
+      href='tel:+443300430030'
+      className='mx-auto flex h-8 w-full max-w-80 items-center justify-center bg-black xs:rounded-b-xl sm:ml-auto sm:mr-10'
     >
-      Call us on 0208 8290495
+      Call us on 0330 043 0030
     </a>
   );
 }

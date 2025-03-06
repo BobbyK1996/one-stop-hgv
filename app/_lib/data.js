@@ -134,12 +134,12 @@ export const SOCIALS_DATA = [
   // },
   {
     logo: <TiSocialFacebookCircular />,
-    href: 'https://www.google.co.uk/',
+    href: 'https://www.facebook.com/profile.php?id=61573622671796',
     newTab: true,
   },
   {
     logo: <TiSocialInstagramCircular />,
-    href: 'https://www.google.co.uk/',
+    href: 'https://www.instagram.com/roadreadyhgv',
     newTab: true,
   },
 ];
@@ -148,7 +148,7 @@ export const CONTACT_DATA = {
   // address: 'Your address here',
   // addressLink: 'www.google.com',
   email: 'info@roadreadyhgv.com',
-  phoneNumber: '0208 8290495',
+  phoneNumber: '0330 043 0030',
 };
 
 export const dataArray = [
@@ -309,8 +309,8 @@ export const dataArray = [
           'For any questions or concerns regarding these Terms, please contact us:',
         subContent: [
           'Email: info@roadreadyhgv.com',
-          'Phone: [your phone number]',
-          'Address: [your business address]',
+          'Phone: 0330 043 0030',
+          'Address: Platinum Suite, Unimix House, Abbey Road, London, NW10 7TR',
         ],
       },
     ],
